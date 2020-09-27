@@ -22,7 +22,7 @@ function App() {
             });
     }
 
-    setTimeout(getLocations, 1000);
+    setTimeout(getLocations, 100);
     
     return(
         <div>

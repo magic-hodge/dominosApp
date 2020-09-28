@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Header from "./Header";
 import Location from "./Location";
 import LocationArea from "./LocationArea";
+import Footer from "./Footer";
 import axios from "axios";
 
 function App() {
@@ -29,21 +30,24 @@ function App() {
     setTimeout(getLocations, 100);
     
     return(
-        <div>
-            <Header/>
-            <LocationArea onAdd={getLocations}/>
-            <div className="location-items">
-                {sortedLocations.map((locationItem, index) => {
-                    return <Location
-                    key={index}
-                    id={index}
-                    address={locationItem.address}
-                    gateCode={locationItem.gateCode}
-                    siteMap={locationItem.siteMap}
-                    notes={locationItem.notes}
-                    />
-                })}
+        <div className="container">
+            <div className="wrapper">
+                <Header/>
+                <LocationArea onAdd={getLocations}/>
+                <div className="location-items">
+                    {sortedLocations.map((locationItem, index) => {
+                        return <Location
+                        key={index}
+                        id={index}
+                        address={locationItem.address}
+                        gateCode={locationItem.gateCode}
+                        siteMap={locationItem.siteMap}
+                        notes={locationItem.notes}
+                        />
+                    })}
+                </div>
             </div>    
+            <Footer/>  
         </div>
     );
 }

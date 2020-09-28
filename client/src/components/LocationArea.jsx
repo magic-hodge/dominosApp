@@ -66,6 +66,7 @@ function LocationArea(props) {
             </Zoom>
             {isExpanded && <form action="/" method="post">
                 <input
+                    className="address-input"
                     name="address"
                     placeholder="Address. . ."
                     onChange={handleChange}
@@ -84,6 +85,7 @@ function LocationArea(props) {
                     value={location.siteMap}
                 />
                 <textarea
+                    className="notes-area"
                     name="notes"
                     placeholder="Additional Notes. . ."
                     rows="3"

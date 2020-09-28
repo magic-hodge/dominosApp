@@ -11,6 +11,15 @@ body {
     font-family: 'Sawarabi Gothic', sans-serif;
 }
 
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.wrapper {
+    padding-bottom: 10vh;
+}
+
 /* Styling for the header section. */
 
 header {
@@ -39,6 +48,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .location-area button {
@@ -63,10 +73,19 @@ header {
 }
 
 .location-area input, textarea {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: none;
     padding: 10px;
     background-color: #FFFFFF;
+}
+
+.address-input {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.notes-area {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* Styling for the location items. */
@@ -79,10 +98,62 @@ header {
 }
 
 .location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 15px;
     border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.location h3, p {
+    padding: 5px;
+}
+
+.location p {
+    margin-bottom: 10px;
+}
+.location button {
+    background: #D2112C;
+    color: #000000;
+    width: 100px;
+    height: 25px;
+    margin: 5px auto;
+    border-radius: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.location a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Styling for the Footer. */
+
+.footer-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 10vh;
+    width: 100vw;
+    bottom: 0;
+    position: absolute;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 0.75em;
+}
+
+.footer-class p {
+    padding: 10px;
+    margin: 5px, auto;
 }
 
 /* The font(s) I'm using.

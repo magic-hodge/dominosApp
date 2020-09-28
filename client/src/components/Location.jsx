@@ -1,5 +1,7 @@
 import React from "react";
 import Toggle from "./Toggle";
+import Fab from '@material-ui/core/Fab';
+import Zoom from '@material-ui/core/Zoom';
 
 function Location(props) {
     
@@ -9,11 +11,12 @@ function Location(props) {
         <div className="location">
             <h2 onClick={switchToggle}>{props.address}</h2>
             {isToggled && <div>
-                <h3>Gate Code:</h3>
-                <h3>{props.gateCode}</h3>
-                <a href={`${props.siteMap}`}>Map</a>
+                <h3>Gate Code: {props.gateCode}</h3>
                 <p>{props.notes}</p>
-            </div> }
+                <Zoom in={true}>
+                    <Fab type="submit"><a href={`${props.siteMap}`}>Map</a></Fab>
+                </Zoom>
+            </div>}
         </div>
     );
 }

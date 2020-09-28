@@ -60,14 +60,14 @@ function LocationArea(props) {
     }
 
     return (
-        <div>
+        <div className="location-area">
             <Zoom in={true}>
-                    <Fab type="toggle" onClick={setExpanded}>{isExpanded ? <CloseIcon/> : "Add New Location"}</Fab>
+                    <Fab type="toggle" onClick={setExpanded}>{isExpanded ? <CloseIcon/> : "New Location"}</Fab>
             </Zoom>
             {isExpanded && <form action="/" method="post">
                 <input
                     name="address"
-                    placeholder={isExpanded ? "Address" : "New Address. . ."}
+                    placeholder="Address. . ."
                     onChange={handleChange}
                     value={location.address}
                 />

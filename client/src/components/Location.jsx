@@ -6,11 +6,11 @@ function Location(props) {
     const [isToggled, switchToggle] = Toggle();
 
     return (
-        <div>
-            <h1 onClick={switchToggle}>{props.address}</h1>
+        <div className="location">
+            <h2 onClick={switchToggle}>{props.address}</h2>
             {isToggled && <div>
-                <h2>Gate Code:</h2>
-                <h1>{props.gateCode}</h1>
+                <h3>Gate Code:</h3>
+                <h3>{props.gateCode}</h3>
                 <a href={`${props.siteMap}`}>Map</a>
                 <p>{props.notes}</p>
             </div> }

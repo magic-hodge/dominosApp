@@ -32,16 +32,18 @@ function App() {
         <div>
             <Header/>
             <LocationArea onAdd={getLocations}/>
-            {sortedLocations.map((locationItem, index) => {
-                return <Location
-                key={index}
-                id={index}
-                address={locationItem.address}
-                gateCode={locationItem.gateCode}
-                siteMap={locationItem.siteMap}
-                notes={locationItem.notes}
-                />
-            })}
+            <div className="location-items">
+                {sortedLocations.map((locationItem, index) => {
+                    return <Location
+                    key={index}
+                    id={index}
+                    address={locationItem.address}
+                    gateCode={locationItem.gateCode}
+                    siteMap={locationItem.siteMap}
+                    notes={locationItem.notes}
+                    />
+                })}
+            </div>    
         </div>
     );
 }

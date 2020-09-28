@@ -1,3 +1,5 @@
+/* All general style. */
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +8,10 @@
   
 body {
     background-color: #0078AC;
+    font-family: 'Sawarabi Gothic', sans-serif;
 }
+
+/* Styling for the header section. */
 
 header {
     display: flex;
@@ -24,6 +29,69 @@ header {
 .dominos-logo{
     background-color: #FFFFFF;
     padding: 15px;
-    border-radius: 50%;
     margin: 15px;
+    border-radius: 50%;
 }
+
+/* Styling for the new location area. */
+
+.location-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-area button {
+    background: #D2112C;
+    color: #000000;
+    width: 175px;
+    margin: 15px auto;
+    border-radius: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.location-area form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+    width: 85%;
+}
+
+.location-area input, textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+/* Styling for the location items. */
+
+.location-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 25px;
+}
+
+.location {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* The font(s) I'm using.
+
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Sawarabi Gothic', sans-serif; */
+
+/* The color-codes for Domino's.
+
+#FFFFFF
+#D2112C
+#0078AC */

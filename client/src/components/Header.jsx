@@ -4,16 +4,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 function Header() {
     return(
         <header className="headerClass">
-            <div>
-                <a href="index.html">
+            <a href="index.html">
                     <img className="dominos-logo"
                     src={require("../dominos_logo_ez.png")}
                     alt="Domino's Pizza Logo"
-                    width={50}
-                    height={50}
+                    width={75}
+                    height={75}
                     />
-                </a>
-            </div>
+            </a>
             <h1>Summerlin, LV</h1>
         </header>
     );

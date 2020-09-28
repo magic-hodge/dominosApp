@@ -3,9 +3,12 @@ import AddIcon from '@material-ui/icons/Add';
 import Fab from '@material-ui/core/Fab';
 import Zoom from '@material-ui/core/Zoom';
 import axios from 'axios';
+import Toggle from './Toggle';
+import CloseIcon from '@material-ui/icons/Close';
 
 function LocationArea(props) {
     
+    const [isExpanded, setExpanded] = Toggle();
     const [location, setLocation] = useState({
         address: "",
         gateCode: "",
@@ -58,10 +61,13 @@ function LocationArea(props) {
 
     return (
         <div>
-            <form action="/" method="post">
+            <Zoom in={true}>
+                    <Fab type="toggle" onClick={setExpanded}>{isExpanded ? <CloseIcon/> : "Add New Location"}</Fab>
+            </Zoom>
+            {isExpanded && <form action="/" method="post">
                 <input
                     name="address"
-                    placeholder="New Address. . ."
+                    placeholder={isExpanded ? "Address" : "New Address. . ."}
                     onChange={handleChange}
                     value={location.address}
                 />
@@ -87,7 +93,7 @@ function LocationArea(props) {
                 <Zoom in={true}>
                     <Fab type="submit" onClick={submitLocation}><AddIcon /></Fab>
                 </Zoom>
-            </form>
+            </form>}
         </div>
     );
 }

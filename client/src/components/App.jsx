@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Header from "./Header";
 import Location from "./Location";
 import LocationArea from "./LocationArea";
 import axios from "axios";
@@ -6,6 +7,9 @@ import axios from "axios";
 function App() {
     
     const [locations, setLocations] = useState([]);
+
+    // Creates an alphabetized list of locations.
+    const sortedLocations = [].concat(locations).sort((a, b) => a.address > b.address ? 1 : -1);
 
     function getLocations() {
         axios.get('/api')
@@ -26,9 +30,9 @@ function App() {
     
     return(
         <div>
-            <h1>Domino's App!</h1>
+            <Header/>
             <LocationArea onAdd={getLocations}/>
-            {locations.map((locationItem, index) => {
+            {sortedLocations.map((locationItem, index) => {
                 return <Location
                 key={index}
                 id={index}

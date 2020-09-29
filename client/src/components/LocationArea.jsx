@@ -5,6 +5,7 @@ import Zoom from '@material-ui/core/Zoom';
 import axios from 'axios';
 import Toggle from './Toggle';
 import CloseIcon from '@material-ui/icons/Close';
+import MapIcon from '@material-ui/icons/Map';
 
 function LocationArea(props) {
     
